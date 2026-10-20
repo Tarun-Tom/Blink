@@ -1,0 +1,61 @@
+# =====================================================================
+# Blink - Real-Time Driver Drowsiness Detection (.gitignore)
+# =====================================================================
+
+# --- Virtual Environments & Runtimes ---
+.venv/
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# --- Python Bytecode & Cache ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# --- Raw Large Datasets (80,000+ images) ---
+dataset/
+data/
+
+# --- Private / Captured Webcam Samples & Diagnostic Crops ---
+results/diagnostics/crops/
+results/diagnostics/manual_samples/
+results/diagnostics/raw_awake_*.png
+results/diagnostics/clahe_awake_*.png
+results/diagnostics/ui_screens/font_test.png
+
+# --- Smoke Test Intermediate Model (Keep final models/ models intact) ---
+results/smoke_test/smoke_fnn.keras
+
+# --- Environment, Secrets & Local Credentials ---
+.env
+*.env
+.env.*
+*.pem
+*.key
+*.cert
+*.pfx
+
+# --- Agent Metadata & IDEs ---
+.agents/
+.codex/
+.impeccable/
+.gemini/
+SKILL.md
+
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini

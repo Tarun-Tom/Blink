@@ -1,0 +1,57 @@
+{
+    "dataset_path": "H:\\Code Lab\\DriverDrowsiness\\dataset",
+    "total_images": 84898,
+    "splits": {
+        "train": {
+            "awake": 25770,
+            "sleepy": 25167
+        },
+        "val": {
+            "awake": 8591,
+            "sleepy": 8389
+        },
+        "test": {
+            "awake": 8591,
+            "sleepy": 8390
+        }
+    },
+    "split_totals": {
+        "train": 50937,
+        "val": 16980,
+        "test": 16981
+    },
+    "class_totals": {
+        "awake": 42952,
+        "sleepy": 41946
+    },
+    "class_balance": {
+        "awake": 50.59,
+        "sleepy": 49.41
+    },
+    "corrupted_files_count": 0,
+    "corrupted_files": [],
+    "image_modes_sample": {
+        "L": 3000
+    },
+    "top_dimensions_sample": {
+        "84x84": 171,
+        "82x82": 170,
+        "83x83": 169,
+        "81x81": 141,
+        "86x86": 124,
+        "85x85": 120,
+        "80x80": 120,
+        "95x95": 104,
+        "94x94": 102,
+        "90x90": 101
+    },
+    "subject_analysis": {
+        "total_unique_subjects": 37,
+        "subjects_in_train": 37,
+        "subjects_in_val": 37,
+        "subjects_in_test": 37,
+        "subject_overlap_train_val": 37,
+        "subject_overlap_train_test": 37,
+        "leakage_assessment": "Random image-level splitting was applied rather than subject-wise splitting. All 37 subjects appear across train, val, and test splits. This must be highlighted in the academic report as a dataset property."
+    }
+}

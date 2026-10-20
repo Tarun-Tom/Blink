@@ -1,0 +1,33 @@
+{
+    "status": "SUCCESS",
+    "model_architecture": "FNN Baseline (64x64 grayscale -> Flatten -> 512 -> 256 -> 128 -> 1)",
+    "input_shape": [
+        64,
+        64,
+        1
+    ],
+    "total_parameters": 2262017,
+    "class_mapping": {
+        "0": "sleepy",
+        "1": "awake"
+    },
+    "smoke_train_samples": 256,
+    "smoke_val_samples": 64,
+    "epoch_1_metrics": {
+        "loss": 1.0292268991470337,
+        "accuracy": 0.50390625,
+        "val_loss": 0.8238593339920044,
+        "val_accuracy": 0.484375
+    },
+    "confusion_matrix_smoke_val": [
+        [
+            29,
+            0
+        ],
+        [
+            35,
+            0
+        ]
+    ],
+    "smoke_model_artifact": "results\\smoke_test\\smoke_fnn.keras"
+}

@@ -1,0 +1,21 @@
+{
+    "fnn": {
+        "parameters": 2262017,
+        "model_size_mb": 25.92,
+        "test_accuracy": 91.43,
+        "macro_f1": 0.9143,
+        "sleepy_recall": 92.6,
+        "awake_recall": 90.28,
+        "training_time_sec": 171.03
+    },
+    "cnn": {
+        "parameters": 1141505,
+        "model_size_mb": 13.11,
+        "test_accuracy": 98.75,
+        "macro_f1": 0.9875,
+        "sleepy_recall": 98.4,
+        "awake_recall": 99.08,
+        "training_time_sec": 785.79
+    },
+    "dataset_split_limitation_disclosure": "Both models were trained and evaluated on the same 60/20/20 random image-level split. All 37 subjects are present across train, validation, and test splits. Reported metrics reflect recognition on familiar subjects rather than unseen zero-shot subjects."
+}

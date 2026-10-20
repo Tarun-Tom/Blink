@@ -1,0 +1,27 @@
+{
+    "status": "TRACE_COMPLETED",
+    "model_checkpoint_verified": "models\\cnn_baseline_best.keras",
+    "class_mapping_verified": {
+        "0": "sleepy (closed)",
+        "1": "awake (open)",
+        "sigmoid": "P(awake)"
+    },
+    "ground_truth_test_accuracy": {
+        "sleepy_closed": 100.0,
+        "awake_open": 100.0,
+        "mean_p_sleepy": 0.014137581550380673,
+        "mean_p_awake": 0.9802215123176574
+    },
+    "preprocessing_parity": {
+        "cv2_p_awake": 1.862071621872019e-05,
+        "tf_p_awake": 1.38534014695324e-05,
+        "discrepancy": 4.76731474918779e-06
+    },
+    "evidence_findings": [
+        "1. Model weights, class mapping, and output interpretation are 100% correct.",
+        "2. Grayscale 64x64 float32 rescaling [0, 1] matches training exactly.",
+        "3. Root Cause Part A: Haar cascade `haarcascade_eye.xml` is trained to detect open pupils/irises. When a person closes their eyes, the cascade often either fails (dropping to UNKNOWN) or detects the eyebrow/upper brow crease.",
+        "4. Root Cause Part B: Aspect-ratio distortion. Haar eye bounding boxes are rectangular (e.g. 35x25). Forcing them to 64x64 vertically stretches horizontal closed eyelids into thick elliptical shapes resembling open eyes.",
+        "5. Root Cause Part C: Domain Shift. The MRL dataset consists of near-infrared active-illumination images (flat reflective eyelid skin), whereas an RGB webcam captures visible light with eyelashes, skin creases, and ambient shadows."
+    ]
+}
