@@ -117,8 +117,8 @@ DriverDrowsiness/
 ### 2. Environment Setup
 Clone the repository and create a virtual environment:
 ```bash
-git clone https://github.com/your-username/Blink-Driver-Drowsiness.git
-cd Blink-Driver-Drowsiness
+git clone https://github.com/Tarun-Tom/Blink
+cd Blink
 
 python -m venv .venv
 ```
